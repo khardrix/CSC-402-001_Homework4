@@ -47,4 +47,4 @@ let prefixKeysToValues m = Map.map (fun s (i : int) -> (s + (string i))) m;;
 let compose (m1 : Map<'a, 'b>) (m2 : Map<'b, 'c>) =
     Map.fold (fun m k v ->
         if (m2.ContainsKey v) then Map.add k (Map.find v m2) m
-            else m) Map.empty m1;;
+        else m) Map.empty m1;;
